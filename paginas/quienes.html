@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<link type="text/css" rel="stylesheet" href="../css/template.css" />
+
+<script>
+	
+	function begin_buttons()
+	{
+		document.getElementById('home_button').addEventListener('mouseover', change_home, false);
+		document.getElementById('home_button').addEventListener('mouseout', restore_home, false);
+		
+		document.getElementById('who_button').addEventListener('mouseover', change_who, false);
+		document.getElementById('who_button').addEventListener('mouseout', restore_who, false);
+		
+		document.getElementById('advisers_button').addEventListener('mouseover', change_advisers, false);
+		document.getElementById('advisers_button').addEventListener('mouseout', restore_advisers, false);
+		
+		document.getElementById('converter_button').addEventListener('mouseover', change_converter, false);
+		document.getElementById('converter_button').addEventListener('mouseout', restore_converter, false);
+		
+		document.getElementById('download_button').addEventListener('mouseover', change_download, false);
+		document.getElementById('download_button').addEventListener('mouseout', restore_download, false);
+	}
+	
+	function change_home()
+	{
+		document.getElementById('home_button').src="../botones/boton_inicio(2).png";
+	}
+	function restore_home()
+	{
+		document.getElementById('home_button').src="../botones/boton_inicio(1).png";
+	}
+	
+	function change_who()
+	{
+		document.getElementById('who_button').src="../botones/boton_quienes(2).png";
+	}
+	function restore_who()
+	{
+		document.getElementById('who_button').src="../botones/boton_quienes(1).png";
+	}
+	
+	function change_advisers()
+	{
+		document.getElementById('advisers_button').src="../botones/boton_asesores(2).png";
+	}
+	function restore_advisers()
+	{
+		document.getElementById('advisers_button').src="../botones/boton_asesores(1).png";
+	}
+	
+	function change_converter()
+	{
+		document.getElementById('converter_button').src="../botones/boton_convertir(2).png";
+	}
+	function restore_converter()
+	{
+		document.getElementById('converter_button').src="../botones/boton_convertir(1).png";
+	}
+	
+	function change_download()
+	{
+		document.getElementById('download_button').src="../botones/boton_descargas(2).png";
+	}
+	function restore_download()
+	{
+		document.getElementById('download_button').src="../botones/boton_descargas(1).png";
+	}
+</script>
+
+<style type="text/css">
+	
+	#container
+	{
+	margin:0px auto;
+	font-size:1em;
+	width: 950px;
+	height: 880px; 	
+	z-index: 0;
+	background: #FFFFFF;
+	border-left: 1.5px solid #205791;
+	border-right: 1.5px solid #205791;
+	border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+	box-shadow: 0px 0px 15px #000;
+	margin-top: 0px !important;
+	margin-bottom: -10px;
+	font-size:1em;
+	}
+	
+	#overall_text
+    {
+	margin-left:10px;
+	margin-right:10px;
+	margin-top: 0px;
+	margin-bottom: 0;
+	}
+	
+	@media screen and (max-width:980px) 
+	{
+	
+	#container 
+	{
+	width:98%;
+	height: 850px;
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:60.288px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+	height:51.0425px;
+	}
+	
+	#img_logo
+	{
+	position:relative;
+	left:-95px;
+	width:188,4px;
+	height:144,44px;
+	}
+	
+	#img_letras
+	{
+	position:relative;
+	left:-80px;
+	width:437,088px;
+	height:18,84px;
+	}
+	
+	#home_button
+	{
+	width:160,768px;
+	height:60.288px;
+	}
+	
+	#who_button
+	{
+	width:160,768px;
+	height:60.288px;
+	}
+	
+	#advisers_button
+	{
+	width:160,768px;
+	height:60.288px;
+	}
+	
+	#converter_button
+	{
+	width:245.004px;
+	height:51.0425px;
+	}
+	
+	#download_button
+	{
+	width:245.004px;
+	height:51.0425px;
+	}
+	
+	}
+	
+	@media screen and (max-width:700px) 
+	{
+	
+	#container 
+	{
+	width:98%;
+	height: 1030px;
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:43,056px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+	height:25px;
+	}
+	
+	#img_logo
+	{
+	width:134.55px;
+	height:103.155px;
+	}
+	
+	#img_letras
+	{
+	width:312.156px;
+	height:13.455px;
+	}
+	
+	#home_button
+	{
+	width:114.816px;
+	height:43,056px;
+	}
+	
+	#who_button
+	{
+	width:114.816px;
+	height:43,056px;
+	}
+	
+	#advisers_button
+	{
+	width:114.816px;
+	height:43,056px;
+	}
+	
+	#converter_button
+	{
+	width:120px;
+	height:25px;
+	}
+	
+	#download_button
+	{
+	width:120px;
+	height:25px;
+	}
+	
+	}
+	
+	@media screen and (max-width:480px) 
+	{
+	#container 
+	{
+	width:98%;
+	height: 1250px;
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:30px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+	height:25px;
+	}
+	
+    #img_logo
+	{
+	position:relative;
+	left:-10px;
+	width:93.75px;
+	height:71.875px;
+	}
+	
+	#img_letras
+	{
+	position:relative;
+	left:-10px;
+	width:217.5px;
+	height:9.375px;
+	}
+	
+	#home_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#who_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#advisers_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#converter_button
+	{
+	width:120px;
+	height:25px;
+	}
+	
+	#download_button
+	{
+	width:120px;
+	height:25px;
+	}
+	
+	}
+	
+	@media (orientation: landscape) 
+	{
+	body 
+	{
+    flex-direction: row;
+	}	
+	}
+	
+	@media (orientation: portrait) 
+	{
+	body 
+	{
+    flex-direction: column;
+	}
+	}
+	
+</style>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="title" content="¿Quiénes Somos?">
+        <meta name="description" content="Pagina del Sistema SWROCI">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>¿Quiénes Somos?</title>
+	</head>
+	
+	<body onload="begin_buttons()">
+		
+		<table width="52%" cellspacing="0" id="logo">
+			<tr>
+				<td align="center" Rowspan="2" width="16%">
+					<img id='img_logo' src="../imagenes/logo_una.png" width="150" height="115" />
+				</td>
+				<td align="left" valign="top">
+					<img id='img_letras' src="../imagenes/letras_logo.png" width="348" height="15" />
+				</td>
+			</tr>
+		</table>
+		<div id="buttons_up">
+			<a href='index.html'>
+				<img id="home_button" src="../botones/boton_inicio(1).png"  width="128" height="63"  />
+			</a>
+			<a href='quienes.html' style="margin-left:-5px">
+				<img id="who_button" src="../botones/boton_quienes(1).png"  width="128" height="63"  />
+			</a>
+			<a href='asesores.html' style="margin-left:-5px">
+				<img id="advisers_button" src="../botones/boton_asesores(1).png"  width="128" height="63"  />
+			</a>
+		</div>
+		
+		<div id="container">
+			<div id="overall_text">
+				<div align="center" style="color:#1A6BAB; font-family: Calibri; font-size: 25px; font-weight: bold; top: 5px; position: relative; margin-bottom: 20px;">
+					¿Quiénes somos?
+				</div>
+				<div style="color: #00788f; font-family: Calibri; font-size: 18px; font-weight: bold;">
+					Universidad Nacional Abierta (UNA):
+				</div>
+				<br/>
+				<div style="font-family: verdana; font-size: 12px;">
+					Fundada el 27 de septiembre de 1977, la Universidad Nacional Abierta (UNA) es una instituci&oacute;n p&uacute;blica, experimental de  educaci&oacute;n   universitaria, bajo la modalidad de estudios de educaci&oacute;n a distancia.   Desde su creaci&oacute;n y hasta la fecha, ofrece estudios universitarios de   calidad en todo el pa&iacute;s, con una concepci&oacute;n propia establecida en su   misi&oacute;n y una proyecci&oacute;n a futuro de acuerdo a su visi&oacute;n, siguiendo los   principios establecidos en sus bases legales, reglamentos de creaci&oacute;n y   reglamento de funcionamiento. La Universidad Nacional Abierta es una   alternativa para la formaci&oacute;n de profesionales calificados y   emprendedores en &aacute;reas prioritarias del desarrollo social, que garantiza   su inserci&oacute;n en el mercado laboral nacional e internacional.
+				</div>
+				<br/>
+				<div>
+					<strong>
+						Leer m&aacute;s en la p&aacute;gina oficial de la UNA: 
+						<a href="http://www.una.edu.ve/" class="Estilo25">
+							http://www.una.edu.ve/ 
+						</a>
+					</strong>
+				</div>
+				<br/>
+				<div style="color: #00788f; font-family: Calibri; font-size: 18px; font-weight: bold;">
+					Centro Local Aragua (CLA):
+				</div>
+				<br/>
+				<div style="font-size: 12px; font-family: Verdana;">
+					<u>MISI&Oacute;N</u>
+				</div>
+				<br/>
+				<div style="font-family: verdana; font-size: 12px;">
+					El Centro Local Aragua, como unidad operativa regional de la U.N.A., bajo la modalidad de educaci&oacute;n abierta y a distancia, tiene como misi&oacute;n: brindar una alternativa en educaci&oacute;n superior, innovadora, dirigida a una poblaci&oacute;n heterog&eacute;nea, a bajo costo, flexible, con base en la excelencia universitaria y respaldada en las tecnolog&iacute;as de la informaci&oacute;n y la comunicaci&oacute;n, que permitan potenciar el desarrollo integral de estudiantes para su egreso, a fin de que alcancen competencias profesionales que les faciliten desempe&ntilde;arse con &eacute;xito en sus contextos.
+				</div>
+				<br/>
+				<div style="font-size: 12px; font-family: verdana;">
+					<u>VALORES</u>
+				</div>
+				<br/>
+				<div style="font-family: verdana; font-size: 12px;">
+					Amor - Sinergia - Cohesi&oacute;n - Efectividad - Creatividad - Honestidad - Autenticidad - Respeto a las leyes - Comunicaci&oacute;n Efectiva - Evaluaci&oacute;n Democr&aacute;tica - Compromiso con la Excelencia - Respeto a la Dignidad Humana - Enfasis en la Calidad del Servicio - Compromiso con la Organizaci&oacute;n - Promotor del &Eacute;xito de la Instituci&oacute;n.
+				</div>
+				<br/>
+				<div>
+					<strong>
+						M&aacute;s info en: 
+						<a href="http://aragua.una.edu.ve/">
+							http://aragua.una.edu.ve/
+						</a>
+					</strong>
+				</div>
+				<br/>
+				<div style="color: #00788f; font-family: Calibri; font-size: 18px; font-weight: bold;">
+					Ingeniería de Sistemas (236):
+				</div>
+				<br/>
+				<div style="font-size: 12px; font-family: verdana;">
+					<u>OBJETIVO</u>
+				</div>
+				<br/>
+				<div style="font-family: verdana; font-size: 12px;">
+				Formar profesionales capacitados en el an&aacute;lisis, dise&ntilde;o, construcci&oacute;n y mantenimiento de los procesos manuales e inform&aacute;ticos aplicando la ciencia de la computaci&oacute;n, teor&iacute;a de sistemas, investigaci&oacute;n de operaciones y estrategias gerenciales, que apoyen las acciones de la organizaci&oacute;n a trav&eacute;s del desarrollo de soluciones integrales en sus diferentes &aacute;reas funcionales, mediante la utilizaci&oacute;n de tecnolog&iacute;as de la informaci&oacute;n y de la comunicaci&oacute;n.<br /></p>
+			</div>
+			<div>
+				<strong>
+					Plan de Estudios: <a href="http://www.ciberesquina.una.edu.ve/evaluacion/"> http://www.ciberesquina.una.edu.ve/</a>
+				</strong>
+			</div>
+			<br/>
+			<div style="color: #00788f; font-family: Calibri; font-size: 18px; font-weight: bold;">
+				TSU en Mantenimiento de Sistemas Informáticos(237):
+			</div>
+			<br/>
+			
+			<div style="font-size: 12px; font-family: verdana;">
+				<u>OBJETIVO</u>
+			</div>
+			<br/>
+			<div style="font-family: verdana; font-size: 12px;">
+				Formar T&eacute;cnicos Superiores Universitarios en Mantenimiento de Sistemas Inform&aacute;ticos capacitados para mantener el apresto en los distintos sistemas inform&aacute;ticos de la instituci&oacute;n, a fin de garantizar el &oacute;ptimo rendimiento en las diferentes operaciones que realiza la misma. 
+			</div>
+		</div>
+	</div>
+	
+	<div id="buttons_down">
+		<a href='convertir.html'>
+			<img id="converter_button" src="../botones/boton_convertir(1).png" width="242" height="48" />
+		</a>
+		<a href='https://subprogramadisenoacademicouna826543778.wordpress.com/acerca-de/' style="margin-left:-5px">
+			<img id="download_button" src="../botones/boton_descargas(1).png" width="242" height="48" />
+		</a>
+	</div>
+</body>
+</html>
+

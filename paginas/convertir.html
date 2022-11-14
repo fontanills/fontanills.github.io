@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+<script src="../javascript/jquery.js" ></script>
+<script src="../javascript/tesseract.js" ></script>
+<script src="../javascript/jspdf.js"></script>
+
+<link type="text/css" rel="stylesheet" href="../css/template.css" />
+
+<script>
+	
+	function begin_buttons()
+	{
+	document.getElementById('home_button').addEventListener('mouseover', change_home, false);
+	document.getElementById('home_button').addEventListener('mouseout', restore_home, false);
+	
+	document.getElementById('who_button').addEventListener('mouseover', change_who, false);
+	document.getElementById('who_button').addEventListener('mouseout', restore_who, false);
+	
+	document.getElementById('advisers_button').addEventListener('mouseover', change_advisers, false);
+	document.getElementById('advisers_button').addEventListener('mouseout', restore_advisers, false);
+	
+	document.getElementById('converter_button').addEventListener('mouseover', change_converter, false);
+	document.getElementById('converter_button').addEventListener('mouseout', restore_converter, false);
+	
+	document.getElementById('download_button').addEventListener('mouseover', change_download, false);
+	document.getElementById('download_button').addEventListener('mouseout', restore_download, false);
+	}
+	
+	function change_home()
+	{
+	document.getElementById('home_button').src="../botones/boton_inicio(2).png";
+	}
+	function restore_home()
+	{
+	document.getElementById('home_button').src="../botones/boton_inicio(1).png";
+	}
+	
+	function change_who()
+	{
+	document.getElementById('who_button').src="../botones/boton_quienes(2).png";
+	}
+	function restore_who()
+	{
+	document.getElementById('who_button').src="../botones/boton_quienes(1).png";
+}
+
+function change_advisers()
+{
+	document.getElementById('advisers_button').src="../botones/boton_asesores(2).png";
+}
+function restore_advisers()
+{
+	document.getElementById('advisers_button').src="../botones/boton_asesores(1).png";
+}
+
+function change_converter()
+{
+	document.getElementById('converter_button').src="../botones/boton_convertir(2).png";
+}
+function restore_converter()
+{
+	document.getElementById('converter_button').src="../botones/boton_convertir(1).png";
+}
+
+function change_download()
+{
+	document.getElementById('download_button').src="../botones/boton_descargas(2).png";
+}
+function restore_download()
+{
+	document.getElementById('download_button').src="../botones/boton_descargas(1).png";
+}
+</script>
+
+<style type="text/css">
+	#container
+	{
+	margin: auto;
+	width: 950px;
+	height: 850px; 	
+	z-index: 0;
+	background: #FFFFFF;
+	border-left: 1.5px solid #205791;
+	border-right: 1.5px solid #205791;
+	border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	box-shadow: 0px 0px 15px #000;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	}
+	
+	#overall_text
+	{
+	margin-left:10px;
+	margin-right:10px;
+	margin-top: 0px;
+	margin-bottom: 0;
+	}
+	
+	#text_ocr
+	{
+	text-align: justify;
+	}
+	
+	@media screen and (max-width:980px) 
+	{
+	
+	#container 
+	{
+	width:98%;
+	height:880px; 
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:60.288px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+    height:51.0425px;
+	}
+	
+	#img_logo
+	{
+	position:relative;
+	left:-95px;
+	width:188,4px;
+	height:144,44px;
+	}
+	
+	#img_letras
+	{
+	position:relative;
+	left:-80px;
+	width:437,088px;
+	height:18,84px;
+	}
+	
+	#home_button
+	{
+	width:160,768px;
+	height:60.288px;
+	}
+	
+	#who_button
+	{
+	width:160,768px;
+	height:60.288px;
+	}
+	
+	#advisers_button
+	{
+	width:160,768px;
+	height:60.288px;
+	}
+	
+	#converter_button
+	{
+	width:245.004px;
+	height:51.0425px;
+	}
+	
+	#download_button
+	{
+	width:245.004px;
+	height:51.0425px;
+	}
+	
+	}
+	
+	@media screen and (max-width:700px) 
+	{
+	
+	#container 
+	{
+	width:98%;
+	height: 880px; 
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:43,056px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+	height:43,056px;
+	}
+	
+	#img_logo
+	{
+	width:134.55px;
+	height:103.155px;
+	}
+	
+	#img_letras
+	{
+	width:312.156px;
+	height:13.455px;
+	}
+	
+	#home_button
+	{
+	width:114.816px;
+	height:43,056px;
+	}
+	
+	#who_button
+	{
+	width:114.816px;
+	height:43,056px;
+	}
+	
+	#advisers_button
+	{
+	width:114.816px;
+	height:43,056px;
+	}
+	
+	#converter_button
+	{
+	width:217,074px;
+	height:43,056px;
+	}
+	
+	#download_button
+	{
+	width:217,074px;
+	height:43,056px;
+	}
+	
+	}
+	
+	@media screen and (max-width:480px) 
+	{
+	#container 
+	{
+	width:98%;
+	height: 1200px; 	
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:30px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+	height:25px;
+	}
+	
+    #img_logo
+	{
+	position:relative;
+	left:-10px;
+	width:93.75px;
+	height:71.875px;
+	}
+	
+	#img_letras
+	{
+	position:relative;
+	left:-10px;
+	width:217.5px;
+	height:9.375px;
+	}
+	
+	#home_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#who_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#advisers_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#converter_button
+	{
+	width:120px;
+	height:25px;
+	}
+	
+	#download_button
+	{
+	width:120px;
+	height:25px;
+	}
+	}
+	
+	@media (orientation: landscape) 
+	{
+	body 
+	{
+    flex-direction: row;
+	}	
+	}
+	
+	@media (orientation: portrait) 
+	{
+	body 
+	{
+    flex-direction: column;
+	}
+	}
+</style>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="title" content="¿Quiénes Somos?">
+        <meta name="description" content="Pagina del Sistema SWROCI">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Reconocimiento Óptico de Caracteres</title>
+	</head>
+	
+	<body onload="begin_buttons();">
+		
+		<table width="52%" cellspacing="0" id="logo">
+			<tr>
+				<td align="center" Rowspan="2" width="16%">
+					<img id='img_logo' src="../imagenes/logo_una.png" width="150" height="115" />
+				</td>
+				<td align="left" valign="top">
+					<img id='img_letras' src="../imagenes/letras_logo.png" width="348" height="15" />
+				</td>
+			</tr>
+		</table>
+		
+		<div id="buttons_up">
+			<a href='index.html'>
+				<img id="home_button" src="../botones/boton_inicio(1).png"  width="128" height="63"  />
+			</a>
+			<a href='quienes.html' style="margin-left:-5px">
+				<img id="who_button" src="../botones/boton_quienes(1).png"  width="128" height="63"  />
+			</a>
+			<a href='asesores.html' style="margin-left:-5px">
+				<img id="advisers_button" src="../botones/boton_asesores(1).png"  width="128" height="63"  />
+			</a>
+		</div>
+		
+		<div id="container" style="">
+			<div id="overall_text">
+				<div align="center" style="color:#1A6BAB; font-family: Calibri; font-size: 25px; font-weight: bold; top: 5px; position: relative;">
+					Convertir Imagen a Texto
+				</div>
+				
+				<div id="text_ocr" style="font-family: Arial; font-size: 14px; margin-top: 20px; margin-bottom: 10px">
+					<p align="left">
+						Reconocimiento Óptico de Caracteres o OCR, es una tecnología que le permite convertir diferentes tipos de documentos, tales como documentos en papel escaneados, archivos de PDF o imágenes captadas por una cámara digital en los datos editables y con opción de búsqueda.
+						Se trata de una solución ideal para automatizar la extracción de datos de texto impreso o escrito de un archivo y luego convertir el texto en un formato legible por máquina para usar en el procesamiento de datos, como edición o búsqueda. El proceso básico consiste en examinar el texto de un documento y traducir los caracteres a un código que pueda utilizarse para el procesamiento de datos.
+					</p>
+				</div>
+				
+				<div style="color: #00788f; font-family: Calibri; font-size: 18px; font-weight: bold">
+					Reconocimiento Óptico de Caracteres mediante Tesseract.js
+				</div>
+				
+				<div id="text_ocr" style="font-family: Arial; font-size: 14px; margin-top: 20px; margin-bottom: 10px">
+					<p align="left">
+						Tesseract se desarrolló originalmente en Hewlett-Packard Laboratories Bristol UK y en Hewlett-Packard Co, Greeley Colorado USA entre 1985 y 1994, con algunos cambios más realizados en 1996 para migrar a Windows y algunos C++ en 1998. En 2005 Tesseract fue un código abierto creado por HP. Desde 2006 hasta noviembre de 2018 fue desarrollado por Google.
+					</p>
+					<p align="left">
+						Actualmente Tesseract.js es uno de los software de ROC más potentes del mundo. Además, este software cuenta con una biblioteca online llamada GitHub que aloja todos los repositorios del código, lo que le permite a los usuarios entrar, dejar sus comentarios, e incluso proponer cambios directamente sobre el código. 
+					</p>
+					<p align="left">
+						Tesseract.js fue programado para que funcionase en esta página WEB con el objetivo de que el personal académico de la UNA y estudiantes pudieran realizar la transcripción del material de estudio de forma rápida y eficiente.
+					</p>
+				</div>
+				<div align="center" style="margin-top: 20px">
+					<img src="../imagenes/huttesseract.png" width="150" height="250"/>
+				</div>
+			</p>
+			<div style="margin-top: 30px; font-family: Arial; font-size: 14px;">
+				Suba una o varias imagenes aquí para convertir
+			</div>
+			</br>
+			<div style="margin-left: 20px; margin-bottom:5px;">
+				<img src="../imagenes/arrow_download.png" width="50" height="50"/>
+			</div>
+			<input align="center" type='file' id='read' multiple>
+			<div style="margin-top: 10px; font-family: Arial; font-size: 14px;">
+				Formatos compatibles: jpg, png, pbm, gif, tif, cur, ico y bmp
+			</div>
+			<div id='prueba'>
+				
+			</div>
+			
+			<div id='post_text' style="margin-top: 10px; font-family: Arial; font-size: 14px;">
+			</div>
+			<div id="pre_img" align="center">
+			</div>
+			
+			<div id='percentage' align="center">
+			</div>
+			
+			<div id="pre_download" style="margin-top: 20px;"></div>
+		</div>
+	</div>
+	
+	<div id="buttons_down">
+		<a href='convertir.html'>
+			<img id="converter_button" src="../botones/boton_convertir(1).png" width="242" height="48" />
+		</a>
+		<a href='https://subprogramadisenoacademicouna826543778.wordpress.com/acerca-de/' style="margin-left:-5px">
+			<img id="download_button" src="../botones/boton_descargas(1).png" width="242" height="48" />
+		</a>
+	</div>
+	
+</body>
+</html>
+
+<script>
+	window.addEventListener('resize', start);
+	
+	function start()
+	{
+		if (window.matchMedia("(max-width: 980px)").matches)
+		{
+			if(document.getElementById('img_upload'))
+			{
+				document.getElementById('container').style.height = '1000px';
+			}
+			
+			if(document.getElementById('img_container'))
+			{
+				document.getElementById('container').style.height = '1317px';
+			}
+		}
+		
+		if (window.matchMedia("(max-width: 700px)").matches)
+		{
+			if(document.getElementById('img_upload'))
+			{
+				document.getElementById('container').style.height = '954px';
+			}
+			
+			if(document.getElementById('img_container'))
+			{
+				document.getElementById('container').style.height = '1136px';
+			}	
+		}
+		
+		if (window.matchMedia("(max-width: 480px)").matches)
+		{
+			if(document.getElementById('img_upload'))
+			{
+				document.getElementById('container').style.height = '1300px';
+			}
+			
+			if(document.getElementById('img_container'))
+			{
+				document.getElementById('container').style.height = '1550px';
+			}
+		}
+	}
+	
+	function percentage(cont_global)
+	{		
+		cont_global++;
+		
+		if(val_status == 'loading tesseract core' && val_percentage > 0)
+		{
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(val_percentage/5)*100+'%';
+		}
+		
+		if(val_status == 'initialized tesseract')
+		{
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(val_percentage/4)*100+'%';
+		}
+		
+		if(val_status == 'loading language traineddata (from cache)')
+		{
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+val_percentage*100+'%';
+		}
+		
+		if(val_status == 'initialized api')
+		{
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(val_percentage/2)*100+'%';
+			result = val_percentage/2;
+		}
+		
+		if(val_status == 'recognizing text' && val_percentage > 0 && val_percentage < 0.6)
+		{
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(parseFloat(val_percentage/10)+parseFloat(result))*100+'%';
+		}
+		
+		if(val_status == 'recognizing text' && val_percentage >= 0.6)
+		{
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+val_percentage*100+'%';
+		}
+	}
+	
+	function txt_file(content, name_file) 
+	{
+		//creamos un FileReader para leer el Blob
+		var reader = new FileReader();
+		//Definimos la función que manejará el archivo
+		//una vez haya terminado de leerlo
+		reader.onload = function (event) {
+			//Usaremos un link para iniciar la descarga
+			var save = document.createElement('a');
+			save.href = event.target.result;
+			save.target = '_blank';
+			//Truco: así le damos el nombre al archivo
+			save.download = name_file;
+			var clicEvent = new MouseEvent('click', 
+			{
+				'view': window,
+				'bubbles': true,
+				'cancelable': true
+			});
+			//Simulamos un clic del usuario
+			//no es necesario agregar el link al DOM.
+			save.dispatchEvent(clicEvent);
+			
+			//Y liberamos recursos...
+			(window.URL || window.webkitURL).revokeObjectURL(save.href);
+		};
+		//Leemos el blob y esperamos a que dispare el evento "load"
+		
+		reader.readAsDataURL(content);
+	}
+	
+	function pdf_file(content, name_file) 
+	{
+        var pdf = new jsPDF('p', 'pt', 'letter');
+		
+        specialElementHandlers = {
+            '#bypassme': function (element, renderer) {
+                return true
+			}
+		};
+        margins = {
+            top: 80,
+            bottom: 60,
+            left: 40,
+            width: 522
+		};
+		
+        pdf.fromHTML(
+		content, 
+		margins.left, // x coord
+		margins.top, { // y coord
+			'width': margins.width, 
+			'elementHandlers': specialElementHandlers
+		},
+		
+		function (dispose) {
+			pdf.save(name_file);
+		}, margins
+        );
+	}
+	
+	function doc_file(content, name_file)
+	{
+		var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
+		var postHtml = "</body></html>";
+		var html = preHtml+content+postHtml;
+		
+		var blob = new Blob(['ufeff', html], {
+			type: 'application/msword'
+		});
+		
+		// Specify link url
+		var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
+		
+		// Specify file name
+		name_file = name_file?name_file:'document.doc';
+		
+		// Create download link element
+		var downloadLink = document.createElement("a");
+		
+		document.body.appendChild(downloadLink);
+		
+		if(navigator.msSaveOrOpenBlob ){
+			navigator.msSaveOrOpenBlob(blob, name_file);
+			}else{
+			// Create a link to the file
+			downloadLink.href = url;
+			
+			// Setting the file name
+			downloadLink.download = name_file;
+			
+			//triggering the function
+			downloadLink.click();
+		}
+		
+		document.body.removeChild(downloadLink);
+	}
+	
+	function txt_download()
+	{
+		for(i=0;i<file.length;i++)
+		{
+			txt_file(save_text(i), file[i].name.replace(/\.[^/.]+$/, "")+'.txt');
+		}
+	}
+	function pdf_download()
+	{
+		for(i=0;i<file.length;i++)
+		{
+			pdf_file(message[i], file[i].name.replace(/\.[^/.]+$/, "")+'.pdf');
+		}
+	}
+	function doc_download()
+	{
+		for(i=0;i<file.length;i++)
+		{
+			doc_file(message[i], file[i].name.replace(/\.[^/.]+$/, "")+'.doc');
+		}
+	}
+	
+	function save_text(cont_global) 
+	{
+		copy_message = [];
+		copy_message[0] = message[cont_global];
+		
+		//El constructor de Blob requiere un Array en el primer
+		//parámetro así que no es necesario usar toString. El
+		//segundo parámetro es el tipo MIME del archivo
+		
+		return new Blob(copy_message, {
+			type: 'text/plain'
+		});	
+	}
+	
+	const recognize = async ({ target: { files }  }) => 
+	{
+		repeatVal_1 = 0;
+		repeatVal_2 = 0;
+		repeatVal_3 = 0;
+		repeatVal_4 = 0;
+		repeatVal_5 = 0;
+		
+		message = new Array();
+		file = document.getElementById('read').files;
+		
+		if(document.getElementById('img_container'))
+		{
+			document.getElementById('img_container').remove();
+			document.getElementById('post_text').innerHTML = '';
+		}
+		
+		if (window.matchMedia("(max-width: 980px)").matches)
+		{
+			document.getElementById('container').style.height = '1000px';
+		}
+		
+		if (window.matchMedia("(max-width: 700px)").matches)
+		{
+			document.getElementById('container').style.height = '954px';
+		}
+		
+		if (window.matchMedia("(max-width: 480px)").matches)
+		{
+			document.getElementById('container').style.height = '1300px';
+		}
+		
+		if((window.matchMedia("(max-width: 980px)").matches) || (window.matchMedia("(max-width: 700px)").matches) || (window.matchMedia("(max-width: 480px)").matches))
+		{
+		}
+		else
+		{
+		    document.getElementById('container').style.height = '1000px';
+		}
+		
+		document.getElementById('pre_img').innerHTML = "<img id='img_upload' src='../imagenes/upload.gif' width='66' height='66'/>"
+		
+		for(i=0;i<file.length;i++)
+		{
+			val_percentage = 0;
+			val_status = '';
+			
+			const { data: { text } } = await Tesseract.recognize(files[i], 'eng', 
+			{
+				logger: m => console.log
+				(
+				val_status = m.status,
+				val_percentage = m.progress,
+				percentage(i),
+				),
+			});	
+			
+			message[i] = text;
+			
+		}
+		
+		if (window.matchMedia("(max-width: 980px)").matches)
+		{
+			document.getElementById('container').style.height = '1317px';
+		}
+		
+		if (window.matchMedia("(max-width: 700px)").matches)
+		{
+			document.getElementById('container').style.height = '1136px';
+		}
+		
+		if (window.matchMedia("(max-width: 480px)").matches)
+		{
+			document.getElementById('container').style.height = '1550px';
+		}
+		
+		if((window.matchMedia("(max-width: 980px)").matches) || (window.matchMedia("(max-width: 700px)").matches) || (window.matchMedia("(max-width: 480px)").matches))
+		{
+		}
+		else
+		{
+		    document.getElementById('container').style.height = '1200px';
+		}
+		
+		document.getElementById('img_upload').remove();
+		document.getElementById('percentage').innerHTML = '';
+		document.getElementById('post_text').innerHTML = 'Haga clic sobre una imagen para descargar:';
+		
+		document.getElementById('pre_download').innerHTML = "<div id='img_container'><table width='52%' cellspacing='0'><tr><td valign='center' Rowspan='2' width='16%'><img src='../imagenes/flecha_txt.png' width='250' height='60'/></td><td align='left' ><img src='../imagenes/text.png' width='70' height='70' style='cursor:pointer' onclick='txt_download()'/></td></tr></table></br></br><table width='52%' cellspacing='0'><tr><td valign='center' Rowspan='2' width='16%'><img src='../imagenes/flecha_pdf.png' width='250' height='60'/></td><td align='left' ><img src='../imagenes/pdf.png' width='70' height='70' style='cursor:pointer' onclick='pdf_download()'/></td></tr></table></br></br><table width='52%' cellspacing='0'><tr><td valign='center' Rowspan='2' width='16%'><img src='../imagenes/flecha_doc.png' width='250' height='60'/></td><td align='left' ><img src='../imagenes/doc.png' width='70' height='70' style='cursor:pointer' onclick='doc_download()'/></td></tr></table></div>";
+	}
+	
+	document.getElementById('read').addEventListener('change', recognize);
+</script>
+

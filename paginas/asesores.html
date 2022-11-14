@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<link type="text/css" rel="stylesheet" href="../css/template.css" />
+<script src="../javascript/jquery.js" ></script>
+
+<script>
+	
+	function begin_buttons()
+	{
+	document.getElementById('home_button').addEventListener('mouseover', change_home, false);
+	document.getElementById('home_button').addEventListener('mouseout', restore_home, false);
+	
+	document.getElementById('who_button').addEventListener('mouseover', change_who, false);
+	document.getElementById('who_button').addEventListener('mouseout', restore_who, false);
+	
+	document.getElementById('advisers_button').addEventListener('mouseover', change_advisers, false);
+	document.getElementById('advisers_button').addEventListener('mouseout', restore_advisers, false);
+	
+	document.getElementById('converter_button').addEventListener('mouseover', change_converter, false);
+	document.getElementById('converter_button').addEventListener('mouseout', restore_converter, false);
+	
+	document.getElementById('download_button').addEventListener('mouseover', change_download, false);
+	document.getElementById('download_button').addEventListener('mouseout', restore_download, false);
+	}
+	
+	function change_home()
+	{
+	document.getElementById('home_button').src="../botones/boton_inicio(2).png";
+	}
+	function restore_home()
+	{
+	document.getElementById('home_button').src="../botones/boton_inicio(1).png";
+	}
+	
+	function change_who()
+	{
+	document.getElementById('who_button').src="../botones/boton_quienes(2).png";
+	}
+	function restore_who()
+	{
+	document.getElementById('who_button').src="../botones/boton_quienes(1).png";
+	}
+	
+	function change_advisers()
+	{
+	document.getElementById('advisers_button').src="../botones/boton_asesores(2).png";
+	}
+	function restore_advisers()
+	{
+	document.getElementById('advisers_button').src="../botones/boton_asesores(1).png";
+	}
+	
+	function change_converter()
+	{
+	document.getElementById('converter_button').src="../botones/boton_convertir(2).png";
+	}
+	function restore_converter()
+	{
+	document.getElementById('converter_button').src="../botones/boton_convertir(1).png";
+	}
+	
+	function change_download()
+	{
+	document.getElementById('download_button').src="../botones/boton_descargas(2).png";
+	}
+	function restore_download()
+	{
+	document.getElementById('download_button').src="../botones/boton_descargas(1).png";
+	}
+</script>
+
+<style type="text/css">
+	body
+	{
+	margin:0; 
+	padding:0;
+	height: 100%; 
+	}
+	
+	#container
+	{
+	margin: auto;
+	width: 950px;
+	height: 320px; 	
+	z-index: 0;
+	background: #FFFFFF;
+	border-left: 1.5px solid #205791;
+	border-right: 1.5px solid #205791;
+	border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+	box-shadow: 0px 0px 15px #000;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	}
+	
+	#overall_text
+    {
+	margin-left:10px;
+	margin-right:10px;
+	}
+	
+	@media screen and (max-width:980px) 
+	{
+	
+	#container 
+	{
+	width:98%;
+	height: 350px;
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:60.288px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+	height:51.0425px;
+	}
+	
+	#img_logo
+	{
+	position:relative;
+	left:-95px;
+	width:188,4px;
+	height:144,44px;
+	}
+	
+	#img_letras
+	{
+	position:relative;
+	left:-80px;
+	width:437,088px;
+	height:18,84px;
+	}
+	
+	#home_button
+	{
+	width:160,768px;
+	height:60.288px;
+	}
+	
+	#who_button
+	{
+	width:160,768px;
+	height:60.288px;
+	}
+	
+	#advisers_button
+	{
+	width:160,768px;
+	height:60.288px;
+	}
+	
+	#converter_button
+	{
+	width:245.004px;
+	height:51.0425px;
+	}
+	
+	#download_button
+	{
+	width:245.004px;
+	height:51.0425px;
+	}
+	
+	#experience
+	{
+	margin-top:25px;
+	}
+	
+	}
+	
+	@media screen and (max-width:700px) 
+	{
+	
+	#container 
+	{
+	width:98%;
+	height: 430px;
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:43,056px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+	height:43,056px;
+	}
+	
+	#img_logo
+	{
+	width:134.55px;
+	height:103.155px;
+	}
+	
+	#img_letras
+	{
+	width:312.156px;
+	height:13.455px;
+	}
+	
+	#home_button
+	{
+	width:114.816px;
+	height:43,056px;
+	}
+	
+	#who_button
+	{
+	width:114.816px;
+	height:43,056px;
+	}
+	
+	#advisers_button
+	{
+	width:114.816px;
+	height:43,056px;
+	}
+	
+	#converter_button
+	{
+	width:217,074px;
+	height:43,056px;
+	}
+	
+	#download_button
+	{
+	width:217,074px;
+	height:43,056px;
+	}
+	
+	}
+	
+	@media screen and (max-width:480px) 
+	{
+	#container 
+	{
+	width:98%;
+	height: 430px;
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:30px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+	height:25px;
+	}
+	
+	#img_logo
+	{
+	position:relative;
+	left:-10px;
+	width:93.75px;
+	height:71.875px;
+	}
+	
+	#img_letras
+	{
+	position:relative;
+	left:-10px;
+	width:217.5px;
+	height:9.375px;
+	}
+	
+	#home_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#who_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#advisers_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#converter_button
+	{
+	width:120px;
+	height:25px;
+	}
+	
+	#download_button
+	{
+	width:120px;
+	height:25px;
+	}
+	
+	#experience
+	{
+	margin-left:20px;
+	}
+	
+	}
+	
+	@media (orientation: landscape) 
+	{
+	body 
+	{
+    flex-direction: row;
+	}	
+	}
+	
+	@media (orientation: portrait) 
+	{
+	body 
+	{
+    flex-direction: column;
+	}
+	}
+</style>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="title" content="Asesores">
+        <meta name="description" content="Pagina del Sistema SWROCI">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Asesores</title>
+	</head>
+	
+	<body onload="begin_buttons()">
+		
+		<table width="52%" cellspacing="0" id="logo">
+			<tr>
+				<td align="center" Rowspan="2" width="16%">
+					<img id='img_logo' src="../imagenes/logo_una.png" width="150" height="115" />
+				</td>
+				<td align="left" valign="top">
+					<img id='img_letras' src="../imagenes/letras_logo.png" width="348" height="15" />
+				</td>
+			</tr>
+		</table>
+		<div id="buttons_up">
+			<a href='index.html'>
+				<img id="home_button" src="../botones/boton_inicio(1).png"  width="128" height="63"  />
+			</a>
+			<a href='quienes.html' style="margin-left:-5px">
+				<img id="who_button" src="../botones/boton_quienes(1).png"  width="128" height="63"  />
+			</a>
+			<a href='asesores.html' style="margin-left:-5px">
+				<img id="advisers_button" src="../botones/boton_asesores(1).png"  width="128" height="63"  />
+			</a>
+		</div>
+		<div id="container">
+			<div id="overall_text">
+				<div align="center" style="color:#1A6BAB; font-family: Calibri; font-size: 25px; font-weight: bold; top: 5px; position: relative;">Asesores</div>
+				<br/>
+				
+				<table  cellspacing="0">
+					
+					<tr> 
+						<td align="center" valign="top" width="20%" >
+							<div style="color: #00788f; font-family: Calibri; font-size: 18px; font-weight: bold; margin-left:30px; margin-bottom: 5px">
+								Maria del Carmen Villegas León
+							</div>
+							<img src="../imagenes/Villegas.jpg" width="126" height="121" style='margin-left:30px'/>
+						</td>
+						<td align="left" valign="center" width="70%" style="font-size: 12px; font-family: verdana;">
+							<div id='experience'>
+								Soy Ingeniero de Sistemas egresado de la Universidad Nacional Abierta, donde trabajo como profesora desde 1999, estudié Maestría en Sistemas de Información en la Universidad Simón Bolívar y actualmente participo en el grupo de I y D en el área de Sistemas de Información, Adscrita al Departamento de Procesos y Sistemas en el Laboratorio de Investigación de Sistemas Información (LISI) de la Universidad Simón Bolívar, como estudiante del Doctorado en Ingeniería de esa universidad.
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td align="left" style="font-size: 12px; font-family: verdana; text-decoration: underline;" colspan="2" width="20%">
+							<div id='contact_word' style="margin-left:30px; margin-bottom:5px; margin-top:10px;">Información de Contacto</div> 
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 12px; font-family: verdana;" colspan="2" align="left">
+						Correo: 
+						<strong>
+							mcv236@gmail.com
+						</strong>
+					</td>
+					</tr>
+					<tr>
+						<td style="font-size: 12px; font-family: verdana;" colspan="2" align="left">
+							Facebook: 
+							<strong>
+								https://www.facebook.com/maricarmenvillegasl?fref=ts
+							</strong>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 12px; font-family: verdana;" colspan="2" align="left">
+							Twitter: 
+							<strong> 
+								https://twitter.com/VICONCA
+							</strong>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="buttons_down">
+			<a href='convertir.html'>
+				<img id="converter_button" src="../botones/boton_convertir(1).png" width="242" height="48"/>
+			</a>
+			<a href='https://subprogramadisenoacademicouna826543778.wordpress.com/acerca-de/' style="margin-left:-5px">
+				<img id="download_button" src="../botones/boton_descargas(1).png" width="242" height="48" />
+			</a>
+		</div>
+	</body>
+</html>
+
