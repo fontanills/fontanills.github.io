@@ -97,6 +97,14 @@
 	margin-bottom: 0;
 	}
 	
+	#img_logo
+	{
+	position:relative;
+	left:6px;
+	width:250px;
+	height:100px;
+	}
+	
 	@media screen and (max-width:980px) 
 	{
 	#container 
@@ -217,16 +225,6 @@
 	
 	@media screen and (max-width:480px) 
 	{
-	#logo
-	{
-	 width:20%;
-	}
-	
-	body 
-	{
-	background-size: 300px;
-	}
-	
 	#container 
 	{
 	width:98%;
@@ -312,13 +310,7 @@
 	</head>
 	
 	<body onload="begin_buttons()">
-		<table width="52%" cellspacing="0" id="logo">
-			<tr>
-				<td align="left">
-					<img id='img_logo' src="../imagenes/logo_una.png" width="420" height="150" />
-				</td>
-			</tr>
-		</table>
+		<img id='img_logo' src="../imagenes/logo_una.png" width="420" height="150" />	
 		<div id="buttons_up">
 			<a href='../index.html'>
 				<img id="home_button" src="../botones/boton_inicio(1).png"  width="128" height="63"  />
