@@ -82,6 +82,20 @@
 </script>
 
 <style type="text/css">
+	#div_logo
+	{
+    margin:0px auto;
+	width: 950px;
+	height: 95px;
+	margin-bottom: 60px;
+	}
+	
+	#img_logo
+	{
+    width:420px; 
+	height:150px;
+	}
+	
 	#slides 
 	{
 	z-index:100;
@@ -204,7 +218,7 @@
 	font-family: "Angsana New";
 	}
 	
-	@media screen and (max-width:980px) 
+	@media screen and (max-width:980px) and (min-width: 701px)
 	{
 	#div_logo
 	{
@@ -422,7 +436,7 @@
 	width:250px;
 	height:100px;
 	}
-
+	
 	#container 
 	{
 	width:98%;
@@ -566,75 +580,70 @@
 	</head>
 	
 	<body  onload="begin_buttons()">
-		<table cellspacing="0" id="logo">
-			<tr>
-				<td align="left">
-					<img id='img_logo' src="imagenes/logo_una.png" width="420" height="150" />
-				</td>
-			</tr>
-		</table>
-	<div id="buttons_up">			
-	<a href='index.html'>
-	<img id="home_button" src="botones/boton_inicio(1).png"  width="128" height="63"  />
-	</a>
-	<a href='paginas/quienes.html' style="margin-left:-5px">
-	<img id="who_button" src="botones/boton_quienes(1).png"  width="128" height="63"  />
-	</a>
-	<a href='paginas/asesores.html' style="margin-left:-5px">
-	<img id="advisers_button" src="botones/boton_asesores(1).png"  width="128" height="63"  />
-	</a>
-	</div>	
-	
-	<div id="container">
-	<table cellspacing="0">  
-	<tr>
-	<td width="63%" align="left">
-	<div id="slides">
-	<div class="slides_container">
-	<img class="slider_img" src="imagenes slider/100_3525.JPG"/>
-	<img class="slider_img" src="imagenes slider/100_3526.JPG"/>
-	<img class="slider_img" src="imagenes slider/100_3527.JPG"/>
-	<img class="slider_img" src="imagenes slider/100_3528.JPG"/>
-	</div>
-	</div>
-	</td>
-	<td  valign="top">
-	<div id='social_networks'>
-	<a href='https://www.facebook.com/groups/U.N.A.CentroLocalAragua.Oficial'>
-	<img id='facebook_img' src='imagenes/Facebook.png' alt='Facebook' width="32" height="32" border="0" title='Facebook'/>
-	</a> 
-	<a href='https://unidadacademicacla.blogspot.com/'>
-	<img id='blogger_img' src="imagenes/Blogger.png" alt='Blogger' width="32" height="32" title='Blogger'/>
-	</a>
-	</div>
-	<div id='news_block'>
-	<span id='main_text'> 
-	Noticias
-	</span>
-	<div id="main_news">
-	noticia 1
-	</div>
-	<div class="sub_news">
-	noticia 2
-	</div>
-	<div class="sub_news">
-	noticia 3
-	</div>
-	</div>
-	</td>	
-	</tr>
-	</table>
-	</div>	
-	
-	<div id="buttons_down">
-	<a href='paginas/convertir.html'>
-	<img id="converter_button" src="botones/boton_convertir(1).png" width="242" height="48" />
-	</a>
-	<a href='https://subprogramadisenoacademicouna826543778.wordpress.com/acerca-de/' style="margin-left:-5px">
-	<img id="download_button" src="botones/boton_descargas(1).png" width="242" height="48" />
-	</a>
-	</div>
-	</body>
-	</html>
-	
+		<div id="div_logo">
+			<img id='img_logo' src="imagenes/logo_una.png"/>
+		</div>
+		<div id="buttons_up">			
+			<a href='index.html'>
+				<img id="home_button" src="botones/boton_inicio(1).png"  width="128" height="63"  />
+			</a>
+			<a href='paginas/quienes.html' style="margin-left:-5px">
+				<img id="who_button" src="botones/boton_quienes(1).png"  width="128" height="63"  />
+			</a>
+			<a href='paginas/asesores.html' style="margin-left:-5px">
+				<img id="advisers_button" src="botones/boton_asesores(1).png"  width="128" height="63"  />
+			</a>
+		</div>	
 		
+		<div id="container">
+			<table cellspacing="0">  
+				<tr>
+					<td width="63%" align="left">
+						<div id="slides">
+							<div class="slides_container">
+								<img class="slider_img" src="imagenes slider/100_3525.JPG"/>
+								<img class="slider_img" src="imagenes slider/100_3526.JPG"/>
+								<img class="slider_img" src="imagenes slider/100_3527.JPG"/>
+								<img class="slider_img" src="imagenes slider/100_3528.JPG"/>
+							</div>
+						</div>
+					</td>
+					<td  valign="top">
+						<div id='social_networks'>
+							<a href='https://www.facebook.com/groups/U.N.A.CentroLocalAragua.Oficial'>
+								<img id='facebook_img' src='imagenes/Facebook.png' alt='Facebook' width="32" height="32" border="0" title='Facebook'/>
+							</a> 
+							<a href='https://unidadacademicacla.blogspot.com/'>
+								<img id='blogger_img' src="imagenes/Blogger.png" alt='Blogger' width="32" height="32" title='Blogger'/>
+							</a>
+						</div>
+						<div id='news_block'>
+							<span id='main_text'> 
+								Noticias
+							</span>
+							<div id="main_news">
+								noticia 1
+							</div>
+							<div class="sub_news">
+								noticia 2
+							</div>
+							<div class="sub_news">
+								noticia 3
+							</div>
+						</div>
+					</td>	
+				</tr>
+			</table>
+		</div>	
+		
+		<div id="buttons_down">
+			<a href='paginas/convertir.html'>
+				<img id="converter_button" src="botones/boton_convertir(1).png" width="242" height="48" />
+			</a>
+			<a href='https://subprogramadisenoacademicouna826543778.wordpress.com/acerca-de/' style="margin-left:-5px">
+				<img id="download_button" src="botones/boton_descargas(1).png" width="242" height="48" />
+			</a>
+		</div>
+	</body>
+</html>
+
