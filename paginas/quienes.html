@@ -111,13 +111,27 @@
 	margin-bottom: 0;
 	}
 	
-	
-	@media screen and (max-width:980px) 
+	@media screen and (max-width:980px) and (min-width: 701px)
 	{
+	#div_logo
+	{
+    margin:0px auto;
+	width: 98%;
+	height: 95px;
+	margin-bottom: 10px;
+	}
+	
+	#img_logo
+	{
+	margin-left:10px;
+	width:450px;
+	height:250px;
+	}
+	
 	#container 
 	{
 	width:98%;
-	height: 850px;
+	height: 860px;
 	}
 	
 	#buttons_up
@@ -171,8 +185,23 @@
 	}
 	}
 	
-	@media screen and (max-width:700px) 
+	@media screen and (max-width:700px) and (min-width: 481px)
 	{
+	#div_logo
+	{
+    margin:0px auto;
+	width: 98%;
+	height: 95px;
+	margin-bottom:28px;
+	}
+	
+	#img_logo
+	{
+	width:310px;
+	height:120px;
+	margin-left:10px;
+	}
+	
 	#container 
 	{
 	width:98%;
@@ -189,14 +218,6 @@
 	{
 	width:98%;
 	height:25px;
-	}
-	
-	#img_logo
-	{
-	position:relative;
-	left:6px;	
-	width:250px;
-	height:100px;
 	}
 	
 	#home_button
@@ -302,23 +323,7 @@
 	height:25px;
 	}
 	}
-	
-	@media (orientation: landscape) 
-	{
-	body 
-	{
-    flex-direction: row;
-	}	
-	}
-	
-	@media (orientation: portrait) 
-	{
-	body 
-	{
-    flex-direction: column;
-	}
-	}
-	
+		
 </style>
 
 <html lang="es">
