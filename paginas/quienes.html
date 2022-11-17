@@ -99,8 +99,7 @@
 	
 	#img_logo
 	{
-	position:relative;
-	left:195px;
+    margin-left:270px;
 	width:420px;
 	height:150px;
 	}
@@ -127,7 +126,7 @@
 	
 	#img_logo
 	{
-	position:relative;
+	position:absolute;
 	left:6px;	
 	width:250px;
 	height:100px;
@@ -310,7 +309,13 @@
 	</head>
 	
 	<body onload="begin_buttons()">
-		<img id='img_logo' src="../imagenes/logo_una.png" />	
+	   <table width="20%">
+			<tr>
+				<td align="left">
+					<img id="img_logo" src="../imagenes/logo_una.png" />
+				</td>
+			</tr>
+		</table>
 		<div id="buttons_up">
 			<a href='../index.html'>
 				<img id="home_button" src="../botones/boton_inicio(1).png"  width="128" height="63"  />
