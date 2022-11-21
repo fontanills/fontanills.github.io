@@ -66,6 +66,10 @@
 	{
 		document.getElementById('download_button').src="../botones/boton_descargas(1).png";
 	}
+	
+	
+	
+	
 </script>
 
 <style type="text/css">
@@ -317,6 +321,70 @@
 	}
 	}
 	
+	@media screen and (max-width:320px) 
+	{
+	#div_logo
+	{
+    margin:0px auto;
+	width: 98%;
+	height: 95px;
+	margin-bottom: 10px;
+	}
+	
+	#img_logo
+	{
+	width:250px;
+	height:100px;
+	}
+	
+	#container 
+	{
+	width:98%;
+	height: 1250px;
+	}
+	
+	#buttons_up
+	{
+	width:98%;
+	height:30px;
+	}
+	
+	#buttons_down
+	{
+	width:98%;
+	height:25px;
+	}
+	
+	#home_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#who_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#advisers_button
+	{
+	width:20%;
+	height:30px;
+	}
+	
+	#converter_button
+	{
+	width:120px;
+	height:25px;
+	}
+	
+	#download_button
+	{
+	width:120px;
+	height:25px;
+	}
+	}
 </style>
 
 <html lang="es">
@@ -424,6 +492,10 @@
 			<div style="font-family: verdana; font-size: 12px;">
 				Formar T&eacute;cnicos Superiores Universitarios en Mantenimiento de Sistemas Inform&aacute;ticos capacitados para mantener el apresto en los distintos sistemas inform&aacute;ticos de la instituci&oacute;n, a fin de garantizar el &oacute;ptimo rendimiento en las diferentes operaciones que realiza la misma. 
 			</div>
+			
+			<div id='show'>
+			</div>
+			
 		</div>
 	</div>
 	
@@ -432,9 +504,13 @@
 			<img id="converter_button" src="../botones/boton_convertir(1).png" width="242" height="48" />
 		</a>
 		<a href='home_up.html' style="margin-left:-5px">
-			<img id="download_button" src="../botones/boton_descargas(1).png" width="242" height="48" />
+		<img id="download_button" src="../botones/boton_descargas(1).png" width="242" height="48" />
 		</a>
 	</div>
 </body>
 </html>
+
+<script>
+document.getElementById('show').innerHTML = screen.width;	
+</script>
 
