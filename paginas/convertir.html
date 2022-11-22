@@ -350,149 +350,148 @@
 		</div>
 		
 		<div id="container" style="">
-		<div id="overall_text">
-		<div align="center" style="color:#1A6BAB; font-family: Calibri; font-size: 25px; font-weight: bold; top: 5px; position: relative;">
-		Convertir Imagen a Texto
+			<div id="overall_text">
+				<div align="center" style="color:#1A6BAB; font-family: Calibri; font-size: 25px; font-weight: bold; top: 5px; position: relative;">
+					Convertir Imagen a Texto
+				</div>
+				
+				<div id="text_ocr" style="font-family: Arial; font-size: 14px; margin-top: 20px; margin-bottom: 10px">
+					<p align="left">
+						Reconocimiento Óptico de Caracteres o OCR, es una tecnología que le permite convertir diferentes tipos de documentos, tales como documentos en papel escaneados, archivos de PDF o imágenes captadas por una cámara digital en los datos editables y con opción de búsqueda.
+						Se trata de una solución ideal para automatizar la extracción de datos de texto impreso o escrito de un archivo y luego convertir el texto en un formato legible por máquina para usar en el procesamiento de datos, como edición o búsqueda. El proceso básico consiste en examinar el texto de un documento y traducir los caracteres a un código que pueda utilizarse para el procesamiento de datos.
+					</p>
+				</div>
+				
+				<div style="color: #00788f; font-family: Calibri; font-size: 18px; font-weight: bold">
+					Reconocimiento Óptico de Caracteres mediante Tesseract.js
+				</div>
+				
+				<div id="text_ocr" style="font-family: Arial; font-size: 14px; margin-top: 20px; margin-bottom: 10px">
+					<p align="left">
+						Tesseract se desarrolló originalmente en Hewlett-Packard Laboratories Bristol UK y en Hewlett-Packard Co, Greeley Colorado USA entre 1985 y 1994, con algunos cambios más realizados en 1996 para migrar a Windows y algunos C++ en 1998. En 2005 Tesseract fue un código abierto creado por HP. Desde 2006 hasta noviembre de 2018 fue desarrollado por Google.
+					</p>
+					<p align="left">
+						Actualmente Tesseract.js es uno de los software de ROC más potentes del mundo. Además, este software cuenta con una biblioteca online llamada GitHub que aloja todos los repositorios del código, lo que le permite a los usuarios entrar, dejar sus comentarios, e incluso proponer cambios directamente sobre el código. 
+					</p>
+					<p align="left">
+						Tesseract.js fue programado para que funcionase en esta página WEB con el objetivo de que el personal académico de la UNA y estudiantes pudieran realizar la transcripción del material de estudio de forma rápida y eficiente.
+					</p>
+				</div>
+				<div align="center" style="margin-top: 20px">
+					<img src="../imagenes/huttesseract.png" width="150" height="250"/>
+				</div>
+			</p>
+			<div style="margin-top: 30px; font-family: Arial; font-size: 14px;">
+				Suba una o varias imagenes aquí para convertir
+			</div>
+			</br>
+			<div style="margin-left: 20px; margin-bottom:5px;">
+				<img src="../imagenes/arrow_download.png" width="50" height="50"/>
+			</div>
+			<input align="center" type='file' id='read' multiple>
+			<div style="margin-top: 10px; font-family: Arial; font-size: 14px;">
+				Formatos compatibles: jpg, png, pbm, gif, tif, cur, ico y bmp
+			</div>
+			<div>
+			</div>	
+			
+			<div id='post_text' style="margin-top: 10px; font-family: Arial; font-size: 14px;">
+			</div>
+			<div id="pre_img" align="center">
+			</div>
+			
+			<div id='percentage' align="center">
+			</div>
+			
+			<div id="pre_download" style="margin-top: 20px;"></div>
 		</div>
-		
-		<div id="text_ocr" style="font-family: Arial; font-size: 14px; margin-top: 20px; margin-bottom: 10px">
-		<p align="left">
-		Reconocimiento Óptico de Caracteres o OCR, es una tecnología que le permite convertir diferentes tipos de documentos, tales como documentos en papel escaneados, archivos de PDF o imágenes captadas por una cámara digital en los datos editables y con opción de búsqueda.
-		Se trata de una solución ideal para automatizar la extracción de datos de texto impreso o escrito de un archivo y luego convertir el texto en un formato legible por máquina para usar en el procesamiento de datos, como edición o búsqueda. El proceso básico consiste en examinar el texto de un documento y traducir los caracteres a un código que pueda utilizarse para el procesamiento de datos.
-		</p>
-		</div>
-		
-		<div style="color: #00788f; font-family: Calibri; font-size: 18px; font-weight: bold">
-		Reconocimiento Óptico de Caracteres mediante Tesseract.js
-		</div>
-		
-		<div id="text_ocr" style="font-family: Arial; font-size: 14px; margin-top: 20px; margin-bottom: 10px">
-		<p align="left">
-		Tesseract se desarrolló originalmente en Hewlett-Packard Laboratories Bristol UK y en Hewlett-Packard Co, Greeley Colorado USA entre 1985 y 1994, con algunos cambios más realizados en 1996 para migrar a Windows y algunos C++ en 1998. En 2005 Tesseract fue un código abierto creado por HP. Desde 2006 hasta noviembre de 2018 fue desarrollado por Google.
-		</p>
-		<p align="left">
-		Actualmente Tesseract.js es uno de los software de ROC más potentes del mundo. Además, este software cuenta con una biblioteca online llamada GitHub que aloja todos los repositorios del código, lo que le permite a los usuarios entrar, dejar sus comentarios, e incluso proponer cambios directamente sobre el código. 
-		</p>
-		<p align="left">
-		Tesseract.js fue programado para que funcionase en esta página WEB con el objetivo de que el personal académico de la UNA y estudiantes pudieran realizar la transcripción del material de estudio de forma rápida y eficiente.
-		</p>
-		</div>
-		<div align="center" style="margin-top: 20px">
-		<img src="../imagenes/huttesseract.png" width="150" height="250"/>
-		</div>
-		</p>
-		<div style="margin-top: 30px; font-family: Arial; font-size: 14px;">
-		Suba una o varias imagenes aquí para convertir
-		</div>
-		</br>
-		<div style="margin-left: 20px; margin-bottom:5px;">
-		<img src="../imagenes/arrow_download.png" width="50" height="50"/>
-		</div>
-		<input align="center" type='file' id='read' multiple>
-		<div style="margin-top: 10px; font-family: Arial; font-size: 14px;">
-		Formatos compatibles: jpg, png, pbm, gif, tif, cur, ico y bmp
-		</div>
-		<div id='prueba'>
-		
-		</div>
-		
-		<div id='post_text' style="margin-top: 10px; font-family: Arial; font-size: 14px;">
-		</div>
-		<div id="pre_img" align="center">
-		</div>
-		
-		<div id='percentage' align="center">
-		</div>
-		
-		<div id="pre_download" style="margin-top: 20px;"></div>
-		</div>
-		</div>
-		
-		<div id="buttons_down">
+	</div>
+	
+	<div id="buttons_down">
 		<a href='convertir.html'>
-		<img id="converter_button" src="../botones/boton_convertir(1).png" width="242" height="48" />
+			<img id="converter_button" src="../botones/boton_convertir(1).png" width="242" height="48" />
 		</a>
 		<a href='https://subprogramadisenoacademicouna826543778.wordpress.com/acerca-de/' style="margin-left:-5px">
-		<img id="download_button" src="../botones/boton_descargas(1).png" width="242" height="48" />
+			<img id="download_button" src="../botones/boton_descargas(1).png" width="242" height="48" />
 		</a>
-		</div>
-		
-		</body>
-		</html>
-		
-		<script>
-		window.addEventListener('resize', start);
-		
-		function start()
-		{
+	</div>
+	
+</body>
+</html>
+
+<script>
+	window.addEventListener('resize', start);
+	
+	function start()
+	{
 		if (window.matchMedia("(max-width: 980px)").matches)
 		{
-		if(document.getElementById('img_upload'))
-		{
-		document.getElementById('container').style.height = '1000px';
-		}
-		
-		if(document.getElementById('img_container'))
-		{
-		document.getElementById('container').style.height = '1317px';
-		}
+			if(document.getElementById('img_upload'))
+			{
+				document.getElementById('container').style.height = '1000px';
+			}
+			
+			if(document.getElementById('img_container'))
+			{
+				document.getElementById('container').style.height = '1317px';
+			}
 		}
 		
 		if (window.matchMedia("(max-width: 700px)").matches)
 		{
-		if(document.getElementById('img_upload'))
-		{
-		document.getElementById('container').style.height = '954px';
-		}
-		
-		if(document.getElementById('img_container'))
-		{
-		document.getElementById('container').style.height = '1136px';
-		}	
+			if(document.getElementById('img_upload'))
+			{
+				document.getElementById('container').style.height = '954px';
+			}
+			
+			if(document.getElementById('img_container'))
+			{
+				document.getElementById('container').style.height = '1136px';
+			}	
 		}
 		
 		if (window.matchMedia("(max-width: 480px)").matches)
 		{
-		if(document.getElementById('img_upload'))
-		{
-		document.getElementById('container').style.height = '1300px';
+			if(document.getElementById('img_upload'))
+			{
+				document.getElementById('container').style.height = '1300px';
+			}
+			
+			if(document.getElementById('img_container'))
+			{
+				document.getElementById('container').style.height = '1550px';
+			}
 		}
-		
-		if(document.getElementById('img_container'))
-		{
-		document.getElementById('container').style.height = '1550px';
-		}
-		}
-		}
-		
-		function percentage(cont_global)
-		{		
+	}
+	
+	function percentage(cont_global)
+	{		
 		cont_global++;
 		
 		if(val_status == 'loading tesseract core' && val_percentage > 0)
 		{
-		document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(val_percentage/5)*100+'%';
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(val_percentage/5)*100+'%';
 		}
 		
 		if(val_status == 'initialized tesseract')
 		{
-		document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(val_percentage/4)*100+'%';
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(val_percentage/4)*100+'%';
 		}
 		
 		if(val_status == 'loading language traineddata (from cache)')
 		{
-		document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+val_percentage*100+'%';
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+val_percentage*100+'%';
 		}
 		
 		if(val_status == 'initialized api')
 		{
-		document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(val_percentage/2)*100+'%';
-		result = val_percentage/2;
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(val_percentage/2)*100+'%';
+			result = val_percentage/2;
 		}
 		
 		if(val_status == 'recognizing text' && val_percentage > 0 && val_percentage < 0.6)
 		{
-		document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(parseFloat(val_percentage/10)+parseFloat(result))*100+'%';
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+(parseFloat(val_percentage/10)+parseFloat(result))*100+'%';
 		}
 		
 		if(val_status == 'recognizing text' && val_percentage >= 0.6)
