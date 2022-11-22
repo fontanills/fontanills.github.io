@@ -393,6 +393,9 @@
 				Formatos compatibles: jpg, png, pbm, gif, tif, cur, ico y bmp
 			</div>
 			<div>
+				<br>
+			</div>	
+			<div>
 			</div>	
 			
 			<div id='post_text' style="margin-top: 10px; font-family: Arial; font-size: 14px;">
@@ -403,7 +406,9 @@
 			<div id='percentage' align="center">
 			</div>
 			
-			<div id="pre_download" style="margin-top: 20px;"></div>
+			<div id="pre_download" style="margin-top: 20px;">
+			</div>
+			
 		</div>
 	</div>
 	
@@ -496,79 +501,79 @@
 		
 		if(val_status == 'recognizing text' && val_percentage >= 0.6)
 		{
-		document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+val_percentage*100+'%';
+			document.getElementById('percentage').innerHTML = 'Subiendo imagen '+cont_global+': '+val_percentage*100+'%';
 		}
-		}
-		
-		function txt_file(content, name_file) 
-		{
+	}
+	
+	function txt_file(content, name_file) 
+	{
 		//creamos un FileReader para leer el Blob
 		var reader = new FileReader();
 		//Definimos la función que manejará el archivo
 		//una vez haya terminado de leerlo
 		reader.onload = function (event) {
-		//Usaremos un link para iniciar la descarga
-		var save = document.createElement('a');
-		save.href = event.target.result;
-		save.target = '_blank';
-		//Truco: así le damos el nombre al archivo
-		save.download = name_file;
-		var clicEvent = new MouseEvent('click', 
-		{
-		'view': window,
-		'bubbles': true,
-		'cancelable': true
-		});
-		//Simulamos un clic del usuario
-		//no es necesario agregar el link al DOM.
-		save.dispatchEvent(clicEvent);
-		
-		//Y liberamos recursos...
-		(window.URL || window.webkitURL).revokeObjectURL(save.href);
+			//Usaremos un link para iniciar la descarga
+			var save = document.createElement('a');
+			save.href = event.target.result;
+			save.target = '_blank';
+			//Truco: así le damos el nombre al archivo
+			save.download = name_file;
+			var clicEvent = new MouseEvent('click', 
+			{
+				'view': window,
+				'bubbles': true,
+				'cancelable': true
+			});
+			//Simulamos un clic del usuario
+			//no es necesario agregar el link al DOM.
+			save.dispatchEvent(clicEvent);
+			
+			//Y liberamos recursos...
+			(window.URL || window.webkitURL).revokeObjectURL(save.href);
 		};
 		//Leemos el blob y esperamos a que dispare el evento "load"
 		
 		reader.readAsDataURL(content);
-		}
-		
-		function pdf_file(content, name_file) 
-		{
+	}
+	
+	function pdf_file(content, name_file) 
+	{
         var pdf = new jsPDF('p', 'pt', 'letter');
 		
         specialElementHandlers = {
-		'#bypassme': function (element, renderer) {
-		return true
-		}
+			'#bypassme': function (element, renderer) {
+				return true
+			}
 		};
         margins = {
-		top: 80,
-		bottom: 60,
-		left: 40,
-		width: 522
+			top: 80,
+			bottom: 60,
+			left: 40,
+			width: 522
 		};
 		
         pdf.fromHTML(
 		content, 
 		margins.left, // x coord
 		margins.top, { // y coord
-		'width': margins.width, 
-		'elementHandlers': specialElementHandlers
+			'width': margins.width, 
+			'elementHandlers': specialElementHandlers
 		},
 		
 		function (dispose) {
-		pdf.save(name_file);
+			pdf.save(name_file);
 		}, margins
         );
-		}
-		
-		function doc_file(content, name_file)
-		{
+	}
+	
+	function doc_file(content, name_file)
+	{
 		var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
 		var postHtml = "</body></html>";
 		var html = preHtml+content+postHtml;
 		
 		var blob = new Blob(['ufeff', html], {
-		type: 'application/msword'
+			type: 'application/msword'
 		});
 		
 		// Specify link url
@@ -583,45 +588,45 @@
 		document.body.appendChild(downloadLink);
 		
 		if(navigator.msSaveOrOpenBlob ){
-		navigator.msSaveOrOpenBlob(blob, name_file);
-		}else{
-		// Create a link to the file
-		downloadLink.href = url;
-		
-		// Setting the file name
-		downloadLink.download = name_file;
-		
-		//triggering the function
-		downloadLink.click();
+			navigator.msSaveOrOpenBlob(blob, name_file);
+			}else{
+			// Create a link to the file
+			downloadLink.href = url;
+			
+			// Setting the file name
+			downloadLink.download = name_file;
+			
+			//triggering the function
+			downloadLink.click();
 		}
 		
 		document.body.removeChild(downloadLink);
-		}
-		
-		function txt_download()
-		{
+	}
+	
+	function txt_download()
+	{
 		for(i=0;i<file.length;i++)
 		{
-		txt_file(save_text(i), file[i].name.replace(/\.[^/.]+$/, "")+'.txt');
+			txt_file(save_text(i), file[i].name.replace(/\.[^/.]+$/, "")+'.txt');
 		}
-		}
-		function pdf_download()
-		{
+	}
+	function pdf_download()
+	{
 		for(i=0;i<file.length;i++)
 		{
-		pdf_file(message[i], file[i].name.replace(/\.[^/.]+$/, "")+'.pdf');
+			pdf_file(message[i], file[i].name.replace(/\.[^/.]+$/, "")+'.pdf');
 		}
-		}
-		function doc_download()
-		{
+	}
+	function doc_download()
+	{
 		for(i=0;i<file.length;i++)
 		{
-		doc_file(message[i], file[i].name.replace(/\.[^/.]+$/, "")+'.doc');
+			doc_file(message[i], file[i].name.replace(/\.[^/.]+$/, "")+'.doc');
 		}
-		}
-		
-		function save_text(cont_global) 
-		{
+	}
+	
+	function save_text(cont_global) 
+	{
 		copy_message = [];
 		copy_message[0] = message[cont_global];
 		
@@ -630,12 +635,12 @@
 		//segundo parámetro es el tipo MIME del archivo
 		
 		return new Blob(copy_message, {
-		type: 'text/plain'
+			type: 'text/plain'
 		});	
-		}
-		
-		const recognize = async ({ target: { files }  }) => 
-		{
+	}
+	
+	const recognize = async ({ target: { files }  }) => 
+	{
 		repeatVal_1 = 0;
 		repeatVal_2 = 0;
 		repeatVal_3 = 0;
@@ -647,23 +652,23 @@
 		
 		if(document.getElementById('img_container'))
 		{
-		document.getElementById('img_container').remove();
-		document.getElementById('post_text').innerHTML = '';
+			document.getElementById('img_container').remove();
+			document.getElementById('post_text').innerHTML = '';
 		}
 		
 		if (window.matchMedia("(max-width: 980px)").matches)
 		{
-		document.getElementById('container').style.height = '1000px';
+			document.getElementById('container').style.height = '1000px';
 		}
 		
 		if (window.matchMedia("(max-width: 700px)").matches)
 		{
-		document.getElementById('container').style.height = '954px';
+			document.getElementById('container').style.height = '954px';
 		}
 		
 		if (window.matchMedia("(max-width: 480px)").matches)
 		{
-		document.getElementById('container').style.height = '1300px';
+			document.getElementById('container').style.height = '1300px';
 		}
 		
 		if((window.matchMedia("(max-width: 980px)").matches) || (window.matchMedia("(max-width: 700px)").matches) || (window.matchMedia("(max-width: 480px)").matches))
@@ -671,43 +676,43 @@
 		}
 		else
 		{
-		document.getElementById('container').style.height = '1000px';
+			document.getElementById('container').style.height = '1000px';
 		}
 		
 		document.getElementById('pre_img').innerHTML = "<img id='img_upload' src='../imagenes/upload.gif' width='66' height='66'/>"
 		
 		for(i=0;i<file.length;i++)
 		{
-		val_percentage = 0;
-		val_status = '';
-		
-		const { data: { text } } = await Tesseract.recognize(files[i], 'eng', 
-		{
-		logger: m => console.log
-		(
-		val_status = m.status,
-		val_percentage = m.progress,
-		percentage(i),
-		),
-		});	
-		
-		message[i] = text;
-		
+			val_percentage = 0;
+			val_status = '';
+			
+			const { data: { text } } = await Tesseract.recognize(files[i], 'eng', 
+			{
+				logger: m => console.log
+				(
+				val_status = m.status,
+				val_percentage = m.progress,
+				percentage(i),
+				),
+			});	
+			
+			message[i] = text;
+			
 		}
 		
 		if (window.matchMedia("(max-width: 980px)").matches)
 		{
-		document.getElementById('container').style.height = '1317px';
+			document.getElementById('container').style.height = '1317px';
 		}
 		
 		if (window.matchMedia("(max-width: 700px)").matches)
 		{
-		document.getElementById('container').style.height = '1136px';
+			document.getElementById('container').style.height = '1136px';
 		}
 		
 		if (window.matchMedia("(max-width: 480px)").matches)
 		{
-		document.getElementById('container').style.height = '1550px';
+			document.getElementById('container').style.height = '1550px';
 		}
 		
 		if((window.matchMedia("(max-width: 980px)").matches) || (window.matchMedia("(max-width: 700px)").matches) || (window.matchMedia("(max-width: 480px)").matches))
@@ -715,7 +720,7 @@
 		}
 		else
 		{
-		document.getElementById('container').style.height = '1200px';
+			document.getElementById('container').style.height = '1200px';
 		}
 		
 		document.getElementById('img_upload').remove();
@@ -723,9 +728,8 @@
 		document.getElementById('post_text').innerHTML = 'Haga clic sobre una imagen para descargar:';
 		
 		document.getElementById('pre_download').innerHTML = "<div id='img_container'><table width='52%' cellspacing='0'><tr><td valign='center' Rowspan='2' width='16%'><img src='../imagenes/flecha_txt.png' width='250' height='60'/></td><td align='left' ><img src='../imagenes/text.png' width='70' height='70' style='cursor:pointer' onclick='txt_download()'/></td></tr></table></br></br><table width='52%' cellspacing='0'><tr><td valign='center' Rowspan='2' width='16%'><img src='../imagenes/flecha_pdf.png' width='250' height='60'/></td><td align='left' ><img src='../imagenes/pdf.png' width='70' height='70' style='cursor:pointer' onclick='pdf_download()'/></td></tr></table></br></br><table width='52%' cellspacing='0'><tr><td valign='center' Rowspan='2' width='16%'><img src='../imagenes/flecha_doc.png' width='250' height='60'/></td><td align='left' ><img src='../imagenes/doc.png' width='70' height='70' style='cursor:pointer' onclick='doc_download()'/></td></tr></table></div>";
-		}
-		
-		document.getElementById('read').addEventListener('change', recognize);
-		</script>
-		
-				
+	}
+	
+	document.getElementById('read').addEventListener('change', recognize);
+</script>
+
