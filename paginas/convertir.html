@@ -393,17 +393,14 @@
 				Formatos compatibles: jpg, png, pbm, gif, tif, cur, ico y bmp
 			</div>
 			<div>
-				<br>
-			</div>	
-			<div>
 			</div>	
 			<div id='post_text' style="margin-top: 10px; font-family: Arial; font-size: 14px;">
 			</div>
 			<div id="pre_img" align="center">
-				</div>
+			</div>
 			<div id='percentage' align="center">
 			</div>
-			<div id="pre_download" style="margin-top: 20px;">
+			<div id="pre_download" style="">
 			</div>
 		</div>
 	</div>
@@ -721,8 +718,7 @@
 		
 		document.getElementById('img_upload').remove();
 		document.getElementById('percentage').innerHTML = '';
-		document.getElementById('post_text').innerHTML = 'Haga clic sobre una imagen para descargar:';
-		
+		document.getElementById('post_text').innerHTML = 'Haga clic sobre una imagen para descargar:';	
 		document.getElementById('pre_download').innerHTML = "<div id='img_container'><table width='52%' cellspacing='0'><tr><td valign='center' Rowspan='2' width='16%'><img src='../imagenes/flecha_txt.png' width='250' height='60'/></td><td align='left' ><img src='../imagenes/text.png' width='70' height='70' style='cursor:pointer' onclick='txt_download()'/></td></tr></table></br></br><table width='52%' cellspacing='0'><tr><td valign='center' Rowspan='2' width='16%'><img src='../imagenes/flecha_pdf.png' width='250' height='60'/></td><td align='left' ><img src='../imagenes/pdf.png' width='70' height='70' style='cursor:pointer' onclick='pdf_download()'/></td></tr></table></br></br><table width='52%' cellspacing='0'><tr><td valign='center' Rowspan='2' width='16%'><img src='../imagenes/flecha_doc.png' width='250' height='60'/></td><td align='left' ><img src='../imagenes/doc.png' width='70' height='70' style='cursor:pointer' onclick='doc_download()'/></td></tr></table></div>";
 	}
 	
