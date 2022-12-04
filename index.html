@@ -1,7 +1,73 @@
 <!DOCTYPE html>
 
-
 <link type="text/css" rel="stylesheet" href="css/template.css" />
+
+<script>
+	
+	function begin_buttons()
+	{
+		document.getElementById('home_button').addEventListener('mouseover', change_home, false);
+		document.getElementById('home_button').addEventListener('mouseout', restore_home, false);
+		
+		document.getElementById('who_button').addEventListener('mouseover', change_who, false);
+		document.getElementById('who_button').addEventListener('mouseout', restore_who, false);
+		
+		document.getElementById('advisers_button').addEventListener('mouseover', change_advisers, false);
+		document.getElementById('advisers_button').addEventListener('mouseout', restore_advisers, false);
+		
+		document.getElementById('converter_button').addEventListener('mouseover', change_converter, false);
+		document.getElementById('converter_button').addEventListener('mouseout', restore_converter, false);
+		
+		document.getElementById('download_button').addEventListener('mouseover', change_download, false);
+		document.getElementById('download_button').addEventListener('mouseout', restore_download, false);
+	}
+	
+	function change_home()
+	{
+		document.getElementById('home_button').src="botones/boton_inicio(2).png";
+	}
+	function restore_home()
+	{
+		document.getElementById('home_button').src="botones/boton_inicio(1).png";
+	}
+	
+	function change_who()
+	{
+		document.getElementById('who_button').src="botones/boton_quienes(2).png";
+	}
+	function restore_who()
+	{
+		document.getElementById('who_button').src="botones/boton_quienes(1).png";
+	}
+	
+	function change_advisers()
+	{
+		document.getElementById('advisers_button').src="botones/boton_asesores(2).png";
+	}
+	function restore_advisers()
+	{
+		document.getElementById('advisers_button').src="botones/boton_asesores(1).png";
+	}
+	
+	function change_converter()
+	{
+		document.getElementById('converter_button').src="botones/boton_convertir(2).png";
+	}
+	function restore_converter()
+	{
+		document.getElementById('converter_button').src="botones/boton_convertir(1).png";
+	}
+	
+	function change_download()
+	{
+		document.getElementById('download_button').src="botones/boton_descargas(2).png";
+	}
+	function restore_download()
+	{
+		document.getElementById('download_button').src="botones/boton_descargas(1).png";
+	}
+		
+</script>
 
 <style type="text/css">
 	#div_logo
@@ -60,7 +126,7 @@
 	.sh__meta h4,
 	.sh__meta span{color:#fff;display:block}
 	.sh__meta a{font-weight:500;transition:color .5s}
-	.sh__btns{bottom:0;left:360px;right:0;top:390px;position:absolute;z-index:10;}
+	.sh__btns{bottom:0;left:338px;right:0;top:390px;position:absolute;z-index:10;}
 	.sh__btns label{border-radius:30px;background-color:rgba(0,0,0);cursor:pointer;margin:0 .2em;height:15px;width:15px;transition:background .5s}
 	.sh__btns label:hover{background-color:rgba(255,255,255,1)}
 	.sh-control,
@@ -232,8 +298,8 @@
 	.sh__meta h4,
 	.sh__meta span{color:#fff;display:block}
 	.sh__meta a{font-weight:500;transition:color .5s}
-	.sh__btns{bottom:0;left:48%;right:0;top:92%;position:absolute;z-index:10;}
-	.sh__btns label{border-radius:30px;background-color:rgba(0,0,0);cursor:pointer;margin:0 .2em;height:48%;width:4%;transition:background .5s}
+	.sh__btns{bottom:0;left:46%;right:0;top:92%;position:absolute;z-index:10;}
+	.sh__btns label{border-radius:30px;background-color:rgba(0,0,0);cursor:pointer;margin:0.6%;height:50%;width:4%;transition:background .5s}
 	.sh__btns label:hover{background-color:rgba(255,255,255,1)}
 	.sh-control,
 	.sh__arrows{position:absolute;right:0;bottom:0;z-index:10;transform:translate3d(0,0,0);transition:transform .3s;box-shadow:0 1px 1px rgba(0,0,0,.15)}
@@ -467,8 +533,8 @@
 	.sh__meta h4,
 	.sh__meta span{color:#fff;display:block}
 	.sh__meta a{font-weight:500;transition:color .5s}
-	.sh__btns{bottom:0;left:48%;right:0;top:92%;position:absolute;z-index:10;}
-	.sh__btns label{border-radius:30px;background-color:rgba(0,0,0);cursor:pointer;margin:0 .2em;height:48%;width:4%;transition:background .5s}
+	.sh__btns{bottom:0;left:46%;right:0;top:92%;position:absolute;z-index:10;}
+	.sh__btns label{border-radius:30px;background-color:rgba(0,0,0);cursor:pointer;margin:0.6%;height:50%;width:4%;transition:background .5s}
 	.sh__btns label:hover{background-color:rgba(255,255,255,1)}
 	.sh-control,
 	.sh__arrows{position:absolute;right:0;bottom:0;z-index:10;transform:translate3d(0,0,0);transition:transform .3s;box-shadow:0 1px 1px rgba(0,0,0,.15)}
@@ -702,8 +768,8 @@
 	.sh__meta h4,
 	.sh__meta span{color:#fff;display:block}
 	.sh__meta a{font-weight:500;transition:color .5s}
-	.sh__btns{bottom:0;left:48%;right:0;top:92%;position:absolute;z-index:10;}
-	.sh__btns label{border-radius:30px;background-color:rgba(0,0,0);cursor:pointer;margin:0 .2em;height:48%;width:4%;transition:background .5s}
+	.sh__btns{bottom:0;left:46%;right:0;top:92%;position:absolute;z-index:10;}
+	.sh__btns label{border-radius:30px;background-color:rgba(0,0,0);cursor:pointer;margin:0.6%;height:50%;width:4%;transition:background .5s}
 	.sh__btns label:hover{background-color:rgba(255,255,255,1)}
 	.sh-control,
 	.sh__arrows{position:absolute;right:0;bottom:0;z-index:10;transform:translate3d(0,0,0);transition:transform .3s;box-shadow:0 1px 1px rgba(0,0,0,.15)}
